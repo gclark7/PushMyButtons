@@ -1,0 +1,39 @@
+html, body {
+    height: 100%;
+}.message{
+	position: absolute;
+	margin-left: 20px;
+	margin-top: 100px;
+	padding:20px;
+	width:100%;
+}
+.controls{
+	z-index: 1;
+	position: fixed;
+	height: 100px;
+	width:100%;
+	background-color: green;
+	margin-bottom: 200px;
+	padding:15px;
+}
+
+.controls label, p {
+	color: white;
+	padding-right: 2px;
+}
+
+.lastPost{
+	position:absolute;
+}
+
+.bottom{
+	padding: 50px;
+	width: 100%;
+	position:fixed;
+	bottom:0px;
+}
+
+
+
+
+
