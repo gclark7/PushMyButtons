@@ -52,8 +52,7 @@ function mainController($scope, $timeout) {
         //$scope.buttons =
         //dataButtons.push(
         //dataButtons.push({ 'button': { 'msg': $scope.btnMessage, 'glyph': 'glyphicon glyphicon-plus', 'drag': 'true' } });
-        dataButtons.push({ 'button':
-            {
+        dataButtons.push({ 'button': {
                 'userName': $scope.userName,
                 'msg': $scope.btnMessage,
                 'glyph': $scope.userIconSelection,
@@ -61,7 +60,6 @@ function mainController($scope, $timeout) {
                 'postNumber': Firebase.ServerValue.TIMESTAMP //$postNumber
             }
         });
-
 
         //myDataRef.update('User ' + "Greg" + ' First ' + "connection");
     };
@@ -77,15 +75,15 @@ function mainController($scope, $timeout) {
 
     //this block updates local user's view with the change, but does not update other users
     myDataRef.on("value", function (snapshot) {
-    //dataButtons.on("value", function (snapshot) {
+        //dataButtons.on("value", function (snapshot) {
         console.log(snapshot.val());
         //$scope.snapShot = myDataRef.limitToLast(1);
         //$scope.snapShot = dataButtons.limitToLast(1);
         $timeout(function () {
-            $scope.buttons = snapshot.val() // works to post buttons
+            $scope.buttons = snapshot.val(); // works to post buttons
             $scope.btnMessage = '';
             window.location.hash = '#notREal';
-            window.location.hash = '#lastPost'
+            window.location.hash = '#lastPost';
             //document.getElementById('btnMessage').focus();
 
             //$scope.buttons = snapshot.val().child('buttons');

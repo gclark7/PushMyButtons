@@ -12,7 +12,7 @@ var babel = require('gulp-babel');
 var htmlmin = require('gulp-htmlmin');
 /*variables*/
 var jsGroup = {
-    all: ['js/app.js', 'js/modules/*.module.js', 'js/constants/*.constant.js', 'js/controllers/*.controller.js', 'js/factories/*.factory.js', 'js/directives/*.directive.js', ]
+    all: ['js/app.js', 'js/modules/*.module.js', 'js/constants/*.constant.js', 'js/controllers/*.controller.js', 'js/factories/*.factory.js', 'js/directives/*.directive.js' ]
 };
 
 /*tasks*/
@@ -63,7 +63,7 @@ function angularProject() {
         message: 'project name:'
     }, function(res) {
         jsGroup = {
-            all: ['js/app.js', 'js/modules/*.module.js', 'js/constants/*.constant.js', 'js/controllers/*.controller.js', 'js/factories/*.factory.js', 'js/directives/*.directive.js',]
+            all: ['js/app.js', 'js/modules/*.module.js', 'js/constants/*.constant.js', 'js/controllers/*.controller.js', 'js/factories/*.factory.js', 'js/directives/*.directive.js']
         };
         var mutator = 0;
         res.project = res.project || "project";
