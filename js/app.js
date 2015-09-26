@@ -15,6 +15,7 @@
 })();*/
 'use strict';
 console.log('hello Developer');
+console.log('hello again');
 function mainController($scope, $timeout) {
 
     var myDataRef = new Firebase('https://torrid-fire-4757.firebaseio.com/');
