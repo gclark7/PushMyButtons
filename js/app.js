@@ -14,8 +14,9 @@
     }
 })();*/
 'use strict';
-
+console.log('hello Developer');
 function mainController($scope, $timeout) {
+
     var myDataRef = new Firebase('https://torrid-fire-4757.firebaseio.com/');
     var dataButtons = myDataRef.child('buttons');
     //var dataButtons = myDataRef.orderByValue('postNumber');
