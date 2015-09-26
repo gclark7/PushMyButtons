@@ -86,7 +86,7 @@ function mainController($scope, $timeout) {
             $scope.btnMessage = '';
             window.location.hash = '#notREal';
             window.location.hash = '#lastPost'
-            document.getElementById('btnMessage').focus();
+            //document.getElementById('btnMessage').focus();
 
             //$scope.buttons = snapshot.val().child('buttons');
             //$scope.buttons = myDataRef.child('buttons');
