@@ -16,8 +16,7 @@
 <body ng-app='' ng-controller='mainController'>
 	<div class='wrapper'>
 
-		<div class='controls'>
-
+		<div class='controls' id='controlsDiv'>
 			<label>enter your name</label><input type='text' ng-model='userName'/>
 			<select ng-model='userIconSelection'>
 				<option ng-repeat='icon in userIconOptions' value='{{icon.glyph}}' >{{icon.user}}</option>
