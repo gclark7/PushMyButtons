@@ -18,9 +18,11 @@
 
 		<div class='controls' id='controlsDiv'>
 			<label>enter your name</label><input type='text' ng-model='userName'/>
-			<select ng-model='userIconSelection'>
-				<option ng-repeat='icon in userIconOptions' value='{{icon.glyph}}' >{{icon.user}}</option>
-			</select>
+
+					<select ng-model='selectedFoodGroup' ng-change='selectionMade()'>
+						<option ng-repeat='item in selectFoodGroup' value='{{item.id}}' >{{item.name}}</option>
+					</select>
+
 			<p id='userMessage' ng-model='message'>{{message}} {{clicked}}</p>
 			<div >
 				<input type='text' id='btnMessage' ng-model='btnMessage' />
@@ -30,20 +32,11 @@
 
 		</div>
 		<!-- <p id='snapShot' ng-model='snapShot'>snapShot = {{snapShot}}</p> -->
-		<div ng-repeat="data in buttons " class='{{messageClass}}'>
-			<!-- <p>data = {{data}} </p> -->
-
-			<div ng-repeat="id in data" draggable='{{id.button.drag}}'>
+		<div ng-repeat="data in foods " class='{{messageClass}}'>
+				<div ng-repeat="id in data" >
 				<!-- <span>id = {{id}}</span> -->
-				<div >
-					<span class="{{id.button.glyph}}"></span>
-					<span>{{id.button.userName}}: </span>
-					<span>{{id.button.msg}}</span>
-
-					<a id='{{id.button.postNumber}}'>
-						<span>{{id.button.postNumber}}</span>
-					</a>
-
+				<div ng-repeat='item in id' >
+					{{item.name}}
 				</div>
 			 </div>
 
